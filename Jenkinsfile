@@ -18,4 +18,5 @@ pipeline {
             junit '**/target/surefire-reports/TEST-*.xml'
         }
     }
+    sleep(10000)
 }

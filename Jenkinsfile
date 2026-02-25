@@ -9,6 +9,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'
+                sleep(10000)
             }
         }
     }
@@ -18,5 +19,5 @@ pipeline {
             junit '**/target/surefire-reports/TEST-*.xml'
         }
     }
-    sleep(10000)
+    
 }
